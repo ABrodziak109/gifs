@@ -29,11 +29,8 @@ public class GifRepository {
         for (Gif gif: ALL_GIFS){
             result += gif.getName();
         }
-
         return result;
     }
-
-
 
     public List<Gif> getFavoritesGifs(){
        return ALL_GIFS.stream()
@@ -41,5 +38,14 @@ public class GifRepository {
                .collect(Collectors.toList());
     }
 
-    
+
+
+    public Gif getGifByName(String name) {
+        for (Gif allGif : ALL_GIFS) {
+            if (allGif.getName().equals(name)){
+                return allGif;
+            }
+        }
+        return null;
+    }
 }
