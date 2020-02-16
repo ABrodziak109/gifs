@@ -2,7 +2,6 @@ package com.akademiakodu.gifs.controller;
 
 import com.akademiakodu.gifs.model.Gif;
 import com.akademiakodu.gifs.repository.GifRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
