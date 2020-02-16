@@ -3,6 +3,7 @@ package com.akademiakodu.gifs.repository;
 import com.akademiakodu.gifs.model.Gif;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -47,5 +48,15 @@ public class GifRepository {
             }
         }
         return null;
+    }
+
+    public List<Gif> getGifsByCategoryId(int id) {
+        List<Gif> gifs = new ArrayList<>();
+        for (Gif g : ALL_GIFS) {
+            if (g.getCategoryId() == id){
+                gifs.add(g);
+            }
+        }
+        return gifs;
     }
 }
